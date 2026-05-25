@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D6 Public API Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <p>D6 Promises + Async/Await</p>
+      <h1>Public API Dashboard</h1>
+      <button type="button" data-action="refresh">Refresh data</button>
+    </header>
+
+    <section class="dashboard" aria-label="API dashboard">
+      <article class="api-card" data-card="weather">
+        <header>
+          <p>Open-Meteo</p>
+          <h2>Ho Chi Minh City Weather</h2>
+        </header>
+        <div class="card-body" data-body></div>
+      </article>
+
+      <article class="api-card" data-card="github">
+        <header>
+          <p>GitHub REST</p>
+          <h2>Next.js Repository</h2>
+        </header>
+        <div class="card-body" data-body></div>
+      </article>
+
+      <article class="api-card" data-card="posts">
+        <header>
+          <p>JSONPlaceholder</p>
+          <h2>Recent Posts</h2>
+        </header>
+        <div class="card-body" data-body></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

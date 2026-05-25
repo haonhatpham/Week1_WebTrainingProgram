@@ -1,0 +1,155 @@
+:root {
+  --color-page: #eef2f6;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #d9e1ea;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-danger: #dc2626;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --radius: 8px;
+  --shadow: 0 18px 45px rgba(31, 41, 55, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-lg);
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.calculator,
+.history-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.calculator {
+  flex: 0 1 380px;
+  overflow: hidden;
+}
+
+.calculator-header {
+  padding: var(--space-md);
+}
+
+.calculator-header p,
+.calculator-header h1,
+.history-panel h2 {
+  margin: 0;
+}
+
+.calculator-header p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.display {
+  display: block;
+  overflow: hidden;
+  min-height: 78px;
+  padding: var(--space-md);
+  background: var(--color-text);
+  color: var(--color-surface);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+}
+
+button {
+  flex: 1 1 calc(25% - var(--space-xs));
+  min-width: 64px;
+  min-height: 56px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #f8fafc;
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+button:hover,
+button:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+button[data-action="operator"],
+button[data-action="equals"] {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+button[data-action="clear"] {
+  color: var(--color-danger);
+}
+
+.zero {
+  flex-basis: 100%;
+}
+
+.history-panel {
+  flex: 1 1 280px;
+  padding: var(--space-md);
+}
+
+#history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-left: var(--space-md);
+  color: var(--color-muted);
+}
+
+#history-list li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .page {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .calculator,
+  .history-panel {
+    flex-basis: auto;
+    width: 100%;
+  }
+}

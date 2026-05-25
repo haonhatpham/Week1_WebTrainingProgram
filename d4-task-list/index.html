@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D4 Task List App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <form class="app" aria-labelledby="app-title">
+      <header class="app-header">
+        <p>D4 DOM + Events</p>
+        <h1 id="app-title">Task List</h1>
+      </header>
+
+      <div class="task-form">
+        <label for="task-input">New task</label>
+        <div class="input-row">
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            autocomplete="off"
+            placeholder="Add a task and press Enter"
+          >
+          <button type="submit" data-action="add">Add</button>
+        </div>
+      </div>
+
+      <section class="toolbar" aria-label="Task filters">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="submit" class="filter is-active" data-action="filter" data-filter="all">All</button>
+          <button type="submit" class="filter" data-action="filter" data-filter="active">Active</button>
+          <button type="submit" class="filter" data-action="filter" data-filter="completed">Completed</button>
+        </div>
+        <p class="count" aria-live="polite">
+          <span data-count="total">0</span> total,
+          <span data-count="active">0</span> active,
+          <span data-count="completed">0</span> completed
+        </p>
+      </section>
+
+      <ul class="task-list" data-task-list aria-label="Tasks"></ul>
+
+      <p class="empty-state" data-empty-state>No tasks yet.</p>
+    </form>
+  </main>
+</body>
+</html>

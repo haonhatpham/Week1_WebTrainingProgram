@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Training Pages</title>
+  <style>
+    :root {
+      --color-page: #f4f6f8;
+      --color-surface: #ffffff;
+      --color-text: #1f2937;
+      --color-muted: #667085;
+      --color-border: #d9e1ea;
+      --color-primary: #0f766e;
+      --space-sm: 12px;
+      --space-md: 20px;
+      --space-lg: 32px;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: var(--color-page);
+      color: var(--color-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(960px, 100%);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    h1 {
+      margin: 0 0 var(--space-sm);
+      font-size: 2.5rem;
+    }
+
+    .intro {
+      margin: 0 0 var(--space-lg);
+      color: var(--color-muted);
+    }
+
+    .page-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .page-list li {
+      flex: 1 1 260px;
+    }
+
+    .page-list a {
+      display: block;
+      min-height: 132px;
+      padding: var(--space-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-list a:hover,
+    .page-list a:focus-visible {
+      border-color: var(--color-primary);
+    }
+
+    .page-list strong,
+    .page-list span {
+      display: block;
+    }
+
+    .page-list strong {
+      margin-bottom: var(--space-sm);
+      color: var(--color-primary);
+      font-size: 1.1rem;
+    }
+
+    .page-list span {
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JavaScript Training Pages</h1>
+    <p class="intro">One folder is one page. Open each lesson from this index.</p>
+
+    <ul class="page-list">
+      <li>
+        <a href="./d2-profile/">
+          <strong>D2 Profile Page</strong>
+          <span>Semantic HTML and responsive Flexbox profile cards.</span>
+        </a>
+      </li>
+      <li>
+        <a href="./d3-calculator/">
+          <strong>D3 Calculator</strong>
+          <span>Vanilla JS calculator with separate logic and DOM files.</span>
+        </a>
+      </li>
+      <li>
+        <a href="./d4-task-list/">
+          <strong>D4 Task List</strong>
+          <span>DOM events, delegation, createElement, filters, and counts.</span>
+        </a>
+      </li>
+      <li>
+        <a href="./d5-registration-form/">
+          <strong>D5 Registration Form</strong>
+          <span>Real-time validation, blur/input feedback, and password strength.</span>
+        </a>
+      </li>
+      <li>
+        <a href="./d6-api-dashboard/">
+          <strong>D6 API Dashboard</strong>
+          <span>Fetch, async/await, retry, skeleton loading, and allSettled.</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
